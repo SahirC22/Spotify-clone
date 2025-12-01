@@ -1,0 +1,475 @@
+body {
+  font-family: "Montserrat", system-ui;
+  margin: 0;
+  background-color: black;
+  color: #fff;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  padding: 0.5rem;
+}
+
+.sidebar {
+  background-color: red;
+  width: 420px;
+  border-radius: 1rem; /* 1 rem = 16 px*/
+  background-color: #000;
+  margin-right: 0.5rem;
+}
+
+.main-content {
+  background-color: blue;
+  flex: 1;
+  border-radius: 1rem;
+  overflow: auto;
+  background-color: #121212;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.music-player {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  background-color: #121212;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 111px;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-option {
+  line-height: 2.5rem;
+  opacity: 0.7;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-option:hover {
+  opacity: 1;
+}
+
+.nav-option i {
+  font-size: 1.25rem;
+}
+
+.nav-option a {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.library {
+  background-color: #121212;
+  border-radius: 1rem;
+  height: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library-options img {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.icons {
+  font-size: 1.25rem;
+  display: flex;
+}
+
+.icons i {
+  margin-right: 1rem;
+  opacity: 0.7;
+}
+
+.icons i:hover {
+  opacity: 1;
+}
+
+.box {
+  height: 8rem;
+  background-color: #232323;
+  border-radius: 0.75rem;
+  margin: 0.75rem 0 1.75rem 0;
+  padding: 0.75rem 1rem;
+}
+
+.box-p1 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.box-p2 {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.badge {
+  background-color: white;
+  border: none;
+  border-radius: 6.25rem;
+  padding: 0.25rem 1rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  height: 2rem;
+  width: fit-content;
+}
+
+.dark-badge {
+  background-color: #000;
+  color: #fff;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem 0 1rem 0;
+  background-color: #121212;
+  z-index: 10;
+}
+
+.sticky-nav-icons {
+  margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 1rem;
+}
+
+@media (max-width: 1150px) {
+  .hide {
+    display: none;
+  }
+}
+
+.card {
+  background-color: #232323;
+  width: 150px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-info {
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+.footer {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 90%;
+  height: 50%;
+  border-top: 1px solid white;
+  opacity: 0.4;
+}
+
+.music-player {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.album {
+  width: 25%;
+  display: flex;
+}
+
+.player {
+  width: 50%;
+  margin-top: 1rem;
+  /* background-color: orange; */
+}
+
+.controls {
+  width: 25%;
+  /* background-color: green; */
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.player-control-icon {
+  height: 1rem;
+  margin-right: 1.7rem;
+  opacity: 0.7;
+}
+
+.player-control-icon:hover {
+  opacity: 1;
+}
+
+.playback-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar {
+  width: 70%;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  border-radius: 100px;
+  height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: #1bd760;
+  border-radius: 50%;
+  margin-top: -5px;
+}
+
+.album-img img {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.album-img {
+  margin: 0.5rem 1rem;
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.song {
+  font-weight: 600;
+}
+
+.artist {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.album-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-icons i {
+  margin-left: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+.progress-bar-volume {
+  width: 40%;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.progress-bar-volume::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  border-radius: 100px;
+  height: 0.2rem;
+}
+
+.progress-bar-volume::-webkit-slider-thumb {
+  appearance: none;
+  height: 0.6rem;
+  width: 0.6rem;
+  background-color: #1bd760;
+  border-radius: 50%;
+  margin-top: -3px;
+}
+
+.control-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.controls-icons {
+  margin-right: 1rem;
+}
+
+@media (max-width: 950px) {
+  .hidden {
+    display: none;
+  }
+}
+
+/* Authentication Modal Styles */
+.auth-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.auth-modal-content {
+  background-color: #121212;
+  margin: 5% auto;
+  padding: 2rem;
+  border: 1px solid #333;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.auth-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.auth-close:hover,
+.auth-close:focus {
+  color: #1bd760;
+}
+
+.auth-form {
+  display: none;
+}
+
+.auth-form.active {
+  display: block;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1bd760;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #232323;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #1bd760;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #1bd760;
+  color: #000;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.auth-btn:hover {
+  background-color: #1ed760;
+  transform: scale(1.02);
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.auth-switch a {
+  color: #1bd760;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}

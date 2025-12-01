@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./assets/logo.png" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Login/Registration Modal -->
+    <div id="authModal" class="auth-modal">
+      <div class="auth-modal-content">
+        <span class="auth-close">&times;</span>
+        
+        <!-- Login Form -->
+        <div id="loginForm" class="auth-form active">
+          <h2>Login</h2>
+          <form id="loginFormSubmit">
+            <div class="input-group">
+              <label for="loginEmail">Email</label>
+              <input type="email" id="loginEmail" name="email" required>
+            </div>
+            <div class="input-group">
+              <label for="loginPassword">Password</label>
+              <input type="password" id="loginPassword" name="password" required>
+            </div>
+            <button type="submit" class="auth-btn">Login</button>
+          </form>
+          <p class="auth-switch">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="registerForm" class="auth-form">
+          <h2>Register</h2>
+          <form id="registerFormSubmit">
+            <div class="input-group">
+              <label for="registerName">Full Name</label>
+              <input type="text" id="registerName" name="name" required>
+            </div>
+            <div class="input-group">
+              <label for="registerEmail">Email</label>
+              <input type="email" id="registerEmail" name="email" required>
+            </div>
+            <div class="input-group">
+              <label for="registerPassword">Password</label>
+              <input type="password" id="registerPassword" name="password" required>
+            </div>
+            <div class="input-group">
+              <label for="registerConfirmPassword">Confirm Password</label>
+              <input type="password" id="registerConfirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit" class="auth-btn">Register</button>
+          </form>
+          <p class="auth-switch">Already have an account? <a href="#" id="showLogin">Login here</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="sidebar">
+        <div class="nav">
+          <div class="nav-option" style="opacity: 1">
+            <i class="fa-solid fa-house"></i>
+            <a href="#">Home</a>
+          </div>
+          <div class="nav-option">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="#">Search</a>
+          </div>
+        </div>
+        <div class="library">
+          <div class="options">
+            <div class="library-options nav-option">
+              <img src="./assets/library_icon.png" />
+              <a href="#">Your Library</a>
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="lib-box">
+            <div class="box">
+              <p class="box-p1">Create your first playlist</p>
+              <p class="box-p2">It's easy, we'll help you</p>
+              <button class="badge">Create playlist</button>
+            </div>
+            <div class="box">
+              <p class="box-p1">Let's find some podcasts to follow</p>
+              <p class="box-p2">We'll keep you updated on new episodes</p>
+              <button class="badge">Browse podcasts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="sticky-nav">
+          <div class="sticky-nav-icons">
+            <img src="./assets/backward_icon.png" />
+            <img src="./assets/forward_icon.png" class="hide" />
+          </div>
+          <div class="sticky-nav-options">
+            <button class="badge nav-item hide">Explore Premium</button>
+            <button class="badge nav-item dark-badge">
+              <i class="fa-regular fa-circle-down" style="margin-right: 5px"></i
+              >Install App
+            </button>
+            <i class="fa-regular fa-user nav-item"></i>
+          </div>
+        </div>
+        <h2>Recently Played</h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="./assets/card1img.jpg" class="card-img" />
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+        </div>
+        <h2>Trending now near you</h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="./assets/John_Cena.jpg" class="card-img" />
+            <p class="card-title">John Cena Theme</p>
+            <p class="card-info">John Cena Theme</p>
+          </div>
+          <div class="card">
+            <img src="./assets/Randy_Orton.jpg" class="card-img" />
+            <p class="card-title">Randy Orton Theme</p>
+            <p class="card-info">Randy Orton Theme</p>
+          </div>
+          <div class="card">
+            <img src="./assets/Money.webp" class="card-img" />
+            <p class="card-title">Shawn McMan Theme</p>
+            <p class="card-info">Shawn McMan Theme</p>
+          </div>
+        </div>
+        <h2>Featured Charts</h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="./assets/card1img.jpg" class="card-img" />
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+          <div class="card">
+            <img src="./assets/card2img.jpg" class="card-img" />
+            <p class="card-title">Top Songs - Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+          <div class="card">
+            <img src="./assets/card3img.jpg" class="card-img" />
+            <p class="card-title">Top Songs - India</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="music-player">
+        <div class="album">
+          <div class="album-img">
+            <img src="./assets/John_Cena.jpg" />
+          </div>
+          <div class="album-info">
+            <p class="song">John Cena Theme</p>
+            <p class="artist">WWE</p>
+          </div>
+          <div class="album-icons">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-ban"></i>
+          </div>
+        </div>
+        <div class="player">
+          <div class="player-controls">
+            <img
+              src="./assets/player_icon1.png"
+              class="player-control-icon"
+              style="opacity: 1; height: 1.5rem"
+            />
+            <img
+              src="./assets/player_icon2.png"
+              class="player-control-icon"
+              style="height: 1.5rem"
+            />
+            <img
+              src="./assets/player_icon3.png"
+              class="player-control-icon"
+              style="height: 2rem; opacity: 1"
+            />
+            <img
+              src="./assets/player_icon4.png"
+              class="player-control-icon"
+              style="height: 1.5rem"
+            />
+            <img
+              src="./assets/player_icon5.png"
+              class="player-control-icon"
+              style="opacity: 1; height: 1.5rem"
+            />
+          </div>
+          <div class="playback-bar">
+            <span class="current-time">0:00</span>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              class="progress-bar"
+              step="1"
+            />
+            <span class="total-time">3:33</span>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="control-options">
+            <i class="fa-solid fa-microphone controls-icons hidden"></i>
+            <i class="fa-solid fa-bars controls-icons hidden"></i>
+            <i class="fa-solid fa-volume-off controls-icons"></i>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              class="progress-bar-volume controls-icons"
+              step="1"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scipt.js"></script>
+  </body>
+</html>
